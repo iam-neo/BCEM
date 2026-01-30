@@ -107,7 +107,9 @@ h1 {
     margin-bottom: 1rem;
     background: linear-gradient(135deg, #1565C0, #0D47A1);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
+    color: transparent;
 }
 
 header p {
