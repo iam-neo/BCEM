@@ -32,6 +32,7 @@ const Footer = () => {
                             <div>
                                 <h3 className="text-2xl font-heading font-bold text-white">BCEM</h3>
                                 <p className="text-sm text-gray-300">Nepalgunj, Nepal</p>
+                                <p className="text-xs text-primary-yellow mt-1">Affiliated to Far-western University</p>
                             </div>
                         </div>
                         <p className="text-gray-300 text-sm leading-relaxed mb-6">

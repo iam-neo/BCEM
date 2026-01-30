@@ -60,8 +60,8 @@ const Home = () => {
                                     alt="BCEM Logo"
                                     className="h-20 w-20 rounded-full border-4 border-white/30 shadow-xl"
                                 />
-                                <span className="px-4 py-2 bg-white/10 backdrop-blur rounded-full text-sm font-medium">
-                                    Est. Nepalgunj, Nepal
+                                <span className="px-4 py-2 bg-white/10 backdrop-blur rounded-full text-sm font-medium border border-white/20">
+                                    Affiliated to Far-western University
                                 </span>
                             </div>
                             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6 leading-tight">

@@ -54,9 +54,8 @@ const About = () => {
                             <h2 className="section-title text-left after:mx-0 after:ml-0">Our Story</h2>
                             <p className="text-gray-600 mb-6 leading-relaxed">
                                 Bheri College of Engineering & Management (BCEM) is a premier institution
-                                located in Nepalgunj, Nepal. Established with a vision to provide quality
-                                higher education in the Mid-Western region, we have been transforming
-                                lives through education.
+                                located in Nepalgunj, Nepal. Affiliated to Far-western University, we have
+                                been transforming lives through education since our establishment.
                             </p>
                             <p className="text-gray-600 mb-6 leading-relaxed">
                                 Our college offers carefully designed programs in Civil Engineering and
