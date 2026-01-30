@@ -1,11 +1,9 @@
 .app-layout {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
 }
 
 .main-content {
     flex: 1;
 }
-
-/* Add any global page transitions or layout tweaks here */
