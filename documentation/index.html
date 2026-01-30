@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCEM - Developer Documentation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="layout">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="logo">
+                <h3>BCEM Docs</h3>
+                <span class="version">v1.0.0</span>
+            </div>
+
+            <div class="nav-group">
+                <h4>Getting Started</h4>
+                <a href="#overview" class="active">Overview</a>
+                <a href="#installation">Installation</a>
+                <a href="#project-structure">Project Structure</a>
+            </div>
+
+            <div class="nav-group">
+                <h4>Core Logic</h4>
+                <a href="#app-architecture">App Architecture</a>
+                <a href="#routing-logic">Routing & Navigation</a>
+                <a href="#design-system">Design System</a>
+            </div>
+
+            <div class="nav-group">
+                <h4>Components</h4>
+                <a href="#component-button">Button</a>
+                <a href="#component-card">Card</a>
+            </div>
+
+            <div class="nav-group">
+                <h4>Backend & API</h4>
+                <a href="#backend-architecture">Architecture</a>
+                <a href="#role-based-access">RBAC & Logins</a>
+                <a href="#tech-stack">Recommended Stack</a>
+            </div>
+
+            <div class="nav-group">
+                <h4>Deployment</h4>
+                <a href="#vercel">Vercel Deployment</a>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="content">
+            <!-- Header -->
+            <header>
+                <h1>Developer Documentation</h1>
+                <p>Comprehensive guide to the Bheri College of Engineering and Management (BCEM) website architecture,
+                    code logic, and future backend roadmap.</p>
+            </header>
+
+            <!-- Overview -->
+            <section id="overview">
+                <h2>Project Overview</h2>
+                <p>The BCEM website is a modern Single Page Application (SPA) built with <strong>React</strong> and
+                    <strong>Vite</strong>. It emphasizes performance, modularity, and a premium "University" aesthetic
+                    using Tailwind CSS.</p>
+                <div class="tech-stack">
+                    <span class="badg react">React 18</span>
+                    <span class="badg vite">Vite</span>
+                    <span class="badg tailwind">Tailwind CSS</span>
+                </div>
+            </section>
+
+            <!-- Installation -->
+            <section id="installation">
+                <h2>Installation & Setup</h2>
+                <p>Follow these steps to set up the project locally:</p>
+                <div class="code-block">
+                    <pre><code class="language-bash"># 1. Clone the repository
+git clone https://github.com/iam-neo/BCEM.git
+cd BCEM
+
+# 2. Install dependencies (Node.js 18+ required)
+npm install
+
+# 3. Start development server
+npm run dev
+
+# 4. Build for production
+npm run build</code></pre>
+                </div>
+            </section>
+
+            <!-- Project Structure -->
+            <section id="project-structure">
+                <h2>Project Structure</h2>
+                <p>The codebase follows a modular structure where each component and page is self-contained.</p>
+                <div class="file-tree">
+                    <ul>
+                        <li><span class="folder">src/</span>
+                            <ul>
+                                <li><span class="folder">components/</span> - Reusable UI building blocks (Button, Card,
+                                    etc.)</li>
+                                <li><span class="folder">pages/</span> - Main route views (Home.jsx, About.jsx, etc.)
+                                </li>
+                                <li><span class="file">App.jsx</span> - Main layout & route definitions</li>
+                                <li><span class="file">main.jsx</span> - Entry point, renders App into DOM</li>
+                                <li><span class="file">index.css</span> - Global styles & Tailwind directives</li>
+                            </ul>
+                        </li>
+                        <li><span class="file">tailwind.config.cjs</span> - Design tokens (colors, fonts, animations)
+                        </li>
+                        <li><span class="file">vercel.json</span> - Server configurations for deployment</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- App Architecture -->
+            <section id="app-architecture">
+                <h2>App Architecture & Logic</h2>
+                <p>The application logic is centralized in <code>App.jsx</code> and wrapped by <code>main.jsx</code>.
+                </p>
+
+                <h3>Entry Point (main.jsx)</h3>
+                <p>This is where React mounts to the DOM. We wrap the entire application in <code>BrowserRouter</code>
+                    to enable client-side routing.</p>
+                <div class="code-block">
+                    <pre><code class="language-jsx">// src/main.jsx
+createRoot(document.getElementById('root')).render(
+    <StrictMode>
+        <BrowserRouter>  {/* Enables routing context for the whole app */}
+            <App />
+        </BrowserRouter>
+    </StrictMode>
+)</code></pre>
+                </div>
+
+                <h3>Layout Architecture (App.jsx)</h3>
+                <p>The <code>App</code> component acts as the <strong>Layout Shell</strong>. It keeps the
+                    <code>Navbar</code> and <code>Footer</code> persistent while only changing the content inside
+                    <code>Routes</code> based on the URL.</p>
+                <div class="code-block">
+                    <pre><code class="language-jsx">// src/App.jsx
+function App() {
+    return (
+        <div className="app-layout">
+            <Navbar />  {/* Persistent Top Navigation */}
+            
+            <main className="main-content">
+                <Routes>
+                    {/* Routes switch components based on URL path */}
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    {/* ... other code */}
+                </Routes>
+            </main>
+            
+            <Footer />  {/* Persistent Bottom Footer */}
+        </div>
+    );
+}</code></pre>
+                </div>
+            </section>
+
+            <!-- Component Logic: Button -->
+            <section id="component-button">
+                <h2>Component Logic: Button</h2>
+                <p>The <code>Button</code> component uses a <strong>Variant Pattern</strong> to be reusable across 6
+                    different styles without code duplication.</p>
+
+                <h3>How it works:</h3>
+                <ul>
+                    <li>It accepts a <code>variant</code> prop (e.g., 'primary', 'outline').</li>
+                    <li>It looks up the CSS classes for that variant in a dictionary object <code>variants</code>.</li>
+                    <li>It combines <code>baseClasses</code> (common logic like padding/rounded) with the selected
+                        variant classes.</li>
+                </ul>
+            </section>
+
+            <!-- Component Logic: Card -->
+            <section id="component-card">
+                <h2>Component Logic: Card</h2>
+                <p>The <code>Card</code> uses the <strong>Compound Component Pattern</strong>. Instead of one giant
+                    component with 50 props, it exposes sub-components (<code>Card.Image</code>,
+                    <code>Card.Title</code>) attached to the main <code>Card</code> function.</p>
+
+                <h3>Usage Pattern</h3>
+                <div class="code-block">
+                    <pre><code class="language-jsx"><Card>
+    <Card.Image src="..." />
+    <Card.Body>
+        <Card.Title>Bachelor of CE</Card.Title>
+        <Card.Text>Description...</Card.Text>
+    </Card.Body>
+</Card></code></pre>
+                </div>
+            </section>
+
+            <!-- Backend Architecture -->
+            <section id="backend-architecture">
+                <h2>Backend Architecture (Future Roadmap)</h2>
+                <p>To scale the application for a full College Management System (CMS), we need to transition from a
+                    Static App to a <strong>Client-Server Architecture</strong>.</p>
+
+                <h3>Why an API is needed?</h3>
+                <p>Even for local testing, the React Frontend (Client) must communicate with the Backend (Server) via an
+                    <strong>API</strong>. This is because React runs in the browser environment (even on localhost) and
+                    cannot securely access the database directly.</p>
+
+                <h3>Decoupled Architecture</h3>
+                <ul>
+                    <li><strong>Frontend (Port 5173):</strong> The React App ("The Face"). Calls APIs.</li>
+                    <li><strong>Backend (Port 8000/3000):</strong> The Logic Server ("The Brain"). Handles Auth,
+                        Database, Logic.</li>
+                    <li><strong>Database (Port 3306):</strong> MySQL/PostgreSQL ("The Memory"). Stores student data.
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Role Based Access -->
+            <section id="role-based-access">
+                <h2>Role-Based Access Control (RBAC)</h2>
+                <p>To support multiple login types (Student, Teacher, Admin, Exam Dept, Super Admin), we implement RBAC.
+                </p>
+
+                <h3>Logic Flow:</h3>
+                <ol>
+                    <li>User logs in via React Form.</li>
+                    <li>Backend verifies credentials and checks the <code>role</code> column in the database.</li>
+                    <li>Backend returns a secure <strong>Token</strong> (JWT) containing the role (e.g.,
+                        <code>role: 'TEACHER'</code>).</li>
+                    <li>React saves the token and uses "Protected Routes" to allow/deny access to specific pages.</li>
+                </ol>
+
+                <div class="code-block">
+                    <pre><code class="language-jsx">// Frontend Route Logic (Concept)
+<Route element={<ProtectedRoute allowedRoles={['SUPER_ADMIN', 'EXAM_DEPT']} />}>
+    <Route path="/exam/upload-marks" element={<UploadMarks />} />
+</Route></code></pre>
+                </div>
+            </section>
+
+            <!-- Tech Stack -->
+            <section id="tech-stack">
+                <h2>Recommended Backend Stack</h2>
+                <p>Based on the requirements, <strong>PHP / Laravel</strong> is the recommended backend choice.</p>
+
+                <div class="tech-stack">
+                    <span class="badg laravel">Laravel</span>
+                    <span class="badg">MySQL</span>
+                    <span class="badg react">React</span>
+                </div>
+
+                <h3>Why Laravel?</h3>
+                <ul>
+                    <li><strong>Built-in Auth:</strong> Robust authentication and role management out of the box.</li>
+                    <li><strong>API Ready:</strong> Excellent support for REST APIs to serve our React frontend.</li>
+                    <li><strong>Admin Panels:</strong> Ecosystem tools (like Filament) can auto-generate admin
+                        dashboards.</li>
+                    <li><strong>Security:</strong> Industry-standard security features (CSRF, SQL Injection protection).
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Deployment -->
+            <section id="vercel">
+                <h2>Deployment Fixes</h2>
+                <p>Initial deployments failed because <code>node_modules</code> (Windows binaries) were uploaded to git.
+                    To fix this logic:</p>
+                <ol>
+                    <li>Created a <code>.gitignore</code> to exclude <code>node_modules</code>.</li>
+                    <li>Converted config files (<code>tailwind.config.js</code>) to CommonJS (<code>.cjs</code>) for
+                        better compatibility with Vercel's build environment.</li>
+                </ol>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+
+</html>
