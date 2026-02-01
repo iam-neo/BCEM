@@ -1,6 +1,10 @@
+import { useState, useEffect } from 'react';
 import Card from '../components/Card/Card';
+import { NoticeSkeleton } from '../components/Skeleton/Skeleton';
 
 const Notices = () => {
+    const [loading, setLoading] = useState(true);
+
     const notices = [
         {
             id: 1,
@@ -51,6 +55,14 @@ const Notices = () => {
             content: 'Annual Sports Week will be held from February 20-25, 2026. All students are encouraged to participate in various sports activities.',
         },
     ];
+
+    // Simulate loading data
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setLoading(false);
+        }, 1000);
+        return () => clearTimeout(timer);
+    }, []);
 
     const getCategoryColor = (category) => {
         switch (category) {
@@ -106,33 +118,41 @@ const Notices = () => {
 
                     {/* Notices */}
                     <div className="max-w-4xl mx-auto space-y-6">
-                        {notices.map((notice) => (
-                            <Card key={notice.id} className="relative overflow-hidden group">
-                                {notice.priority === 'high' && (
-                                    <div className="absolute top-0 right-0 bg-primary-red text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
-                                        Important
-                                    </div>
-                                )}
-                                <Card.Body>
-                                    <div className="flex flex-wrap items-center gap-3 mb-3">
-                                        <Card.Badge variant={getCategoryColor(notice.category)}>
-                                            {notice.category}
-                                        </Card.Badge>
-                                        <span className="text-sm text-gray-500 flex items-center gap-1">
-                                            <span>📅</span>
-                                            {formatDate(notice.date)}
-                                        </span>
-                                    </div>
-                                    <Card.Title className="group-hover:text-primary-blue transition-colors">
-                                        {notice.title}
-                                    </Card.Title>
-                                    <Card.Text>{notice.content}</Card.Text>
-                                    <button className="text-primary-blue font-medium text-sm hover:underline mt-2">
-                                        Read More →
-                                    </button>
-                                </Card.Body>
-                            </Card>
-                        ))}
+                        {loading ? (
+                            // Show skeletons while loading
+                            Array.from({ length: 6 }).map((_, index) => (
+                                <NoticeSkeleton key={index} />
+                            ))
+                        ) : (
+                            // Show actual notices
+                            notices.map((notice) => (
+                                <Card key={notice.id} className="relative overflow-hidden group">
+                                    {notice.priority === 'high' && (
+                                        <div className="absolute top-0 right-0 bg-primary-red text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
+                                            Important
+                                        </div>
+                                    )}
+                                    <Card.Body>
+                                        <div className="flex flex-wrap items-center gap-3 mb-3">
+                                            <Card.Badge variant={getCategoryColor(notice.category)}>
+                                                {notice.category}
+                                            </Card.Badge>
+                                            <span className="text-sm text-gray-500 flex items-center gap-1">
+                                                <span>📅</span>
+                                                {formatDate(notice.date)}
+                                            </span>
+                                        </div>
+                                        <Card.Title className="group-hover:text-primary-blue transition-colors">
+                                            {notice.title}
+                                        </Card.Title>
+                                        <Card.Text>{notice.content}</Card.Text>
+                                        <button className="text-primary-blue font-medium text-sm hover:underline mt-2">
+                                            Read More →
+                                        </button>
+                                    </Card.Body>
+                                </Card>
+                            ))
+                        )}
                     </div>
 
                     {/* Load More */}
