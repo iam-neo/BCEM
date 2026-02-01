@@ -4,6 +4,7 @@ import { NoticeSkeleton } from '../components/Skeleton/Skeleton';
 
 const Notices = () => {
     const [loading, setLoading] = useState(true);
+    const [selectedCategory, setSelectedCategory] = useState('All');
 
     const notices = [
         {
