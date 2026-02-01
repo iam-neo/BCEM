@@ -7,12 +7,18 @@
 
 /* Base Layer Customizations */
 @layer base {
+
+    /* Smooth transitions for theme switching */
+    * {
+        @apply transition-colors duration-300;
+    }
+
     html {
         scroll-behavior: smooth;
     }
 
     body {
-        @apply font-sans text-gray-800 antialiased;
+        @apply font-sans text-gray-800 dark:text-gray-100 antialiased bg-white dark:bg-gray-900;
     }
 
     h1,
@@ -21,7 +27,7 @@
     h4,
     h5,
     h6 {
-        @apply font-heading font-bold text-navy;
+        @apply font-heading font-bold text-navy dark:text-white;
     }
 
     h1 {
@@ -85,7 +91,7 @@
     }
 
     .card {
-        @apply bg-white rounded-xl shadow-card overflow-hidden transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1;
+        @apply bg-white dark:bg-gray-800 rounded-xl shadow-card overflow-hidden transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1;
     }
 
     .card-body {
@@ -93,7 +99,7 @@
     }
 
     .input-field {
-        @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent outline-none transition-all duration-200;
+        @apply w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent outline-none transition-all duration-200;
     }
 
     .badge {
@@ -101,15 +107,15 @@
     }
 
     .badge-primary {
-        @apply bg-brand-100 text-brand-700;
+        @apply bg-brand-100 dark:bg-brand-900 text-brand-700 dark:text-brand-200;
     }
 
     .badge-accent {
-        @apply bg-accent-100 text-accent-700;
+        @apply bg-accent-100 dark:bg-accent-900 text-accent-700 dark:text-accent-200;
     }
 
     .badge-success {
-        @apply bg-green-100 text-green-700;
+        @apply bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-200;
     }
 
     .gradient-primary {
@@ -154,13 +160,13 @@
 }
 
 ::-webkit-scrollbar-track {
-    @apply bg-gray-100;
+    @apply bg-gray-100 dark:bg-gray-800;
 }
 
 ::-webkit-scrollbar-thumb {
-    @apply bg-gray-400 rounded-full;
+    @apply bg-gray-400 dark:bg-gray-600 rounded-full;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    @apply bg-gray-500;
+    @apply bg-gray-500 dark:bg-gray-500;
 }
