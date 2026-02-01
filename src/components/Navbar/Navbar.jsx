@@ -48,7 +48,7 @@ const Navbar = () => {
                             alt="BCEM Logo"
                             className="h-14 w-14 object-contain rounded-full shadow-md group-hover:shadow-lg transition-shadow"
                         />
-                        <div className="hidden sm:block">
+                        <div className="block">
                             <span className="block text-xl font-heading font-bold text-navy dark:text-white">
                                 BCEM
                             </span>
