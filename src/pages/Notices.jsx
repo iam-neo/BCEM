@@ -82,6 +82,14 @@ const Notices = () => {
         });
     };
 
+    // Categories for filtering
+    const categories = ['All', 'Admission', 'Examination', 'Event', 'General'];
+
+    // Filter notices based on selected category
+    const filteredNotices = selectedCategory === 'All'
+        ? notices
+        : notices.filter(notice => notice.category === selectedCategory);
+
     return (
         <div className="notices-page pt-20">
             {/* Hero Section */}
@@ -102,18 +110,18 @@ const Notices = () => {
                 <div className="container-custom">
                     {/* Filter Tags */}
                     <div className="flex flex-wrap justify-center gap-3 mb-10">
-                        <button className="px-5 py-2 rounded-full bg-primary-blue text-white font-medium text-sm">
-                            All Notices
-                        </button>
-                        <button className="px-5 py-2 rounded-full bg-gray-100 text-gray-700 font-medium text-sm hover:bg-gray-200 transition-colors">
-                            Admission
-                        </button>
-                        <button className="px-5 py-2 rounded-full bg-gray-100 text-gray-700 font-medium text-sm hover:bg-gray-200 transition-colors">
-                            Examination
-                        </button>
-                        <button className="px-5 py-2 rounded-full bg-gray-100 text-gray-700 font-medium text-sm hover:bg-gray-200 transition-colors">
-                            Events
-                        </button>
+                        {categories.map((category) => (
+                            <button
+                                key={category}
+                                onClick={() => setSelectedCategory(category)}
+                                className={`px-5 py-2 rounded-full font-medium text-sm transition-all duration-200 ${selectedCategory === category
+                                    ? 'bg-primary-blue text-white shadow-md scale-105'
+                                    : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
+                                    }`}
+                            >
+                                {category === 'All' ? 'All Notices' : category}
+                            </button>
+                        ))}
                     </div>
 
                     {/* Notices */}
@@ -123,9 +131,9 @@ const Notices = () => {
                             Array.from({ length: 6 }).map((_, index) => (
                                 <NoticeSkeleton key={index} />
                             ))
-                        ) : (
-                            // Show actual notices
-                            notices.map((notice) => (
+                        ) : filteredNotices.length > 0 ? (
+                            // Show filtered notices
+                            filteredNotices.map((notice) => (
                                 <Card key={notice.id} className="relative overflow-hidden group">
                                     {notice.priority === 'high' && (
                                         <div className="absolute top-0 right-0 bg-primary-red text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
@@ -152,6 +160,17 @@ const Notices = () => {
                                     </Card.Body>
                                 </Card>
                             ))
+                        ) : (
+                            // No notices found
+                            <div className="text-center py-12">
+                                <div className="text-6xl mb-4">📭</div>
+                                <h3 className="text-xl font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                                    No Notices Found
+                                </h3>
+                                <p className="text-gray-500 dark:text-gray-400">
+                                    There are no notices in the "{selectedCategory}" category yet.
+                                </p>
+                            </div>
                         )}
                     </div>
 
@@ -165,13 +184,13 @@ const Notices = () => {
             </section>
 
             {/* Subscribe Section */}
-            <section className="py-16 bg-gray-50">
+            <section className="py-16 bg-gray-50 dark:bg-gray-800">
                 <div className="container-custom">
                     <div className="max-w-2xl mx-auto text-center">
-                        <h3 className="text-2xl font-heading font-bold text-navy mb-4">
+                        <h3 className="text-2xl font-heading font-bold text-navy dark:text-white mb-4">
                             Stay Updated
                         </h3>
-                        <p className="text-gray-600 mb-6">
+                        <p className="text-gray-600 dark:text-gray-300 mb-6">
                             Subscribe to receive important notices and updates directly in your inbox.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
