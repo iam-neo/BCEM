@@ -1,8 +1,43 @@
 import { Link } from 'react-router-dom';
+import { useRef } from 'react';
+import CountUp from 'react-countup';
+import { useInView } from 'react-intersection-observer';
 import Button from '../components/Button/Button';
 import Card from '../components/Card/Card';
 
 const Home = () => {
+    const [statsRef, statsInView] = useInView({
+        triggerOnce: true,
+        threshold: 0.3,
+    });
+
+    const statistics = [
+        {
+            end: 500,
+            suffix: '+',
+            label: 'Students Enrolled',
+            icon: '👨‍🎓',
+        },
+        {
+            end: 50,
+            suffix: '+',
+            label: 'Experienced Faculty',
+            icon: '👩‍🏫',
+        },
+        {
+            end: 2,
+            suffix: '',
+            label: 'Academic Programs',
+            icon: '📚',
+        },
+        {
+            end: 95,
+            suffix: '%',
+            label: 'Placement Rate',
+            icon: '💼',
+        },
+    ];
+
     const features = [
         {
             icon: '🎓',
@@ -137,6 +172,51 @@ const Home = () => {
                                     <Card.Text className="text-sm">{feature.description}</Card.Text>
                                 </Card.Body>
                             </Card>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Statistics Section */}
+            <section ref={statsRef} className="py-20 gradient-primary text-white relative overflow-hidden">
+                {/* Background Pattern */}
+                <div className="absolute inset-0 opacity-5">
+                    <div className="absolute top-20 right-20 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+                    <div className="absolute bottom-20 left-20 w-96 h-96 bg-primary-yellow rounded-full blur-3xl"></div>
+                </div>
+
+                <div className="container-custom relative z-10">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-4">
+                            Our Achievements
+                        </h2>
+                        <p className="text-gray-200 max-w-2xl mx-auto">
+                            Numbers that speak for our commitment to excellence in education
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+                        {statistics.map((stat, index) => (
+                            <div
+                                key={index}
+                                className="text-center group hover:transform hover:scale-110 transition-all duration-300"
+                            >
+                                <div className="text-5xl mb-3">{stat.icon}</div>
+                                <div className="text-4xl md:text-5xl font-heading font-bold text-white mb-2">
+                                    {statsInView ? (
+                                        <CountUp
+                                            end={stat.end}
+                                            duration={2.5}
+                                            suffix={stat.suffix}
+                                        />
+                                    ) : (
+                                        '0' + stat.suffix
+                                    )}
+                                </div>
+                                <div className="text-gray-200 text-sm md:text-base font-medium">
+                                    {stat.label}
+                                </div>
+                            </div>
                         ))}
                     </div>
                 </div>
