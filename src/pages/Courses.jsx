@@ -176,6 +176,9 @@ const Courses = () => {
                                     src={program.image}
                                     alt={program.title}
                                     className="rounded-2xl shadow-xl w-full h-[400px] object-cover"
+                                    loading="lazy"
+                                    width="600"
+                                    height="400"
                                 />
                             </div>
                         </div>

@@ -321,21 +321,33 @@ const Home = () => {
                                 src="https://images.unsplash.com/photo-1562774053-701939374585?w=300&h=400&fit=crop"
                                 alt="Campus building"
                                 className="rounded-xl shadow-lg w-full h-64 object-cover"
+                                loading="lazy"
+                                width="300"
+                                height="400"
                             />
                             <img
                                 src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=300&h=400&fit=crop"
                                 alt="Students studying"
                                 className="rounded-xl shadow-lg w-full h-64 object-cover mt-8"
+                                loading="lazy"
+                                width="300"
+                                height="400"
                             />
                             <img
                                 src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=300&h=400&fit=crop"
                                 alt="Computer lab"
                                 className="rounded-xl shadow-lg w-full h-64 object-cover"
+                                loading="lazy"
+                                width="300"
+                                height="400"
                             />
                             <img
                                 src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=300&h=400&fit=crop"
                                 alt="Classroom"
                                 className="rounded-xl shadow-lg w-full h-64 object-cover mt-8"
+                                loading="lazy"
+                                width="300"
+                                height="400"
                             />
                         </div>
                     </div>

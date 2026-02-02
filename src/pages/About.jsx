@@ -80,6 +80,9 @@ const About = () => {
                                 src="/building/building.jpeg"
                                 alt="BCEM College Building"
                                 className="rounded-2xl shadow-xl w-full object-cover"
+                                loading="lazy"
+                                width="800"
+                                height="600"
                             />
                             <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-xl p-6 max-w-xs">
                                 <div className="flex items-center gap-3">

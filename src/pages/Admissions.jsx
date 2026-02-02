@@ -232,6 +232,9 @@ const Admissions = () => {
                                 src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&h=500&fit=crop"
                                 alt="Documents and study materials"
                                 className="rounded-2xl shadow-xl w-full object-cover"
+                                loading="lazy"
+                                width="600"
+                                height="500"
                             />
                         </div>
                     </div>
