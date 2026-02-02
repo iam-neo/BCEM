@@ -4,6 +4,8 @@ import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
 import Button from '../components/Button/Button';
 import Card from '../components/Card/Card';
+import Testimonials from '../components/Testimonials/Testimonials';
+import { testimonialsData } from '../data/testimonialsData';
 
 const Home = () => {
     const [statsRef, statsInView] = useInView({
@@ -307,6 +309,20 @@ const Home = () => {
                             />
                         </div>
                     </div>
+                </div>
+            </section>
+
+            {/* Student Testimonials Section */}
+            <section className="section">
+                <div className="container-custom">
+                    <div className="text-center mb-12">
+                        <h2 className="section-title">What Our Students Say</h2>
+                        <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                            Hear from our successful students about their experience at BCEM
+                            and how we helped shape their careers.
+                        </p>
+                    </div>
+                    <Testimonials data={testimonialsData} />
                 </div>
             </section>
 
