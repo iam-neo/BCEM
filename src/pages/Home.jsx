@@ -6,6 +6,7 @@ import Button from '../components/Button/Button';
 import Card from '../components/Card/Card';
 import Testimonials from '../components/Testimonials/Testimonials';
 import { testimonialsData } from '../data/testimonialsData';
+import SEO from '../components/SEO/SEO';
 
 const Home = () => {
     const [statsRef, statsInView] = useInView({
@@ -79,7 +80,12 @@ const Home = () => {
     ];
 
     return (
-        <div className="home-page">
+        <div className="home-page pt-20">
+            <SEO
+                title="BCEM - Bheri College of Engineering & Management | Top College in Nepalgunj"
+                description="Join BCEM for B.E. Civil Engineering and BBA programs. Quality education, modern facilities, experienced faculty. Admissions open for 2026."
+                keywords="BCEM, civil engineering Nepalgunj, BBA college, engineering college Nepal, Bheri College"
+            />
             {/* Hero Section */}
             <section className="relative min-h-[90vh] flex items-center gradient-primary overflow-hidden">
                 {/* Background Pattern */}

@@ -93,6 +93,11 @@ const Notices = () => {
 
     return (
         <div className="notices-page pt-20">
+            <SEO
+                title="Latest Notices & Announcements | BCEM"
+                description="Stay updated with latest notices, exam schedules, and important announcements from BCEM. Check admission updates and academic calendar."
+                url="/notices"
+            />
             {/* Hero Section */}
             <section className="relative py-20 gradient-primary overflow-hidden">
                 <div className="absolute inset-0 opacity-10">

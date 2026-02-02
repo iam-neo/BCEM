@@ -1,4 +1,5 @@
 import Card from '../components/Card/Card';
+import SEO from '../components/SEO/SEO';
 
 const About = () => {
     const stats = [
@@ -33,6 +34,11 @@ const About = () => {
 
     return (
         <div className="about-page pt-20">
+            <SEO
+                title="About BCEM - Premier Engineering & Management College in Nepalgunj"
+                description="Affiliated to Far-western University, BCEM offers quality education in Civil Engineering and Business Administration with modern facilities and expert faculty."
+                url="/about"
+            />
             {/* Hero Section */}
             <section className="relative py-20 gradient-primary overflow-hidden">
                 <div className="absolute inset-0 opacity-10">

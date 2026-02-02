@@ -3,6 +3,7 @@ import Button from '../components/Button/Button';
 import Card from '../components/Card/Card';
 import FAQ from '../components/FAQ/FAQ';
 import { faqData } from '../data/faqData';
+import SEO from '../components/SEO/SEO';
 
 const Admissions = () => {
     const steps = [

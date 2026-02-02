@@ -56,6 +56,11 @@ const Contact = () => {
 
     return (
         <div className="contact-page pt-20">
+            <SEO
+                title="Contact BCEM - Get in Touch | Nepalgunj, Nepal"
+                description="Contact BCEM for admissions, inquiries, and information. Visit us in Nepalgunj or reach us via phone and email."
+                url="/contact"
+            />
             {/* Hero Section */}
             <section className="relative py-20 gradient-primary overflow-hidden">
                 <div className="absolute inset-0 opacity-10">

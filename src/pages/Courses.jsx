@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import Button from '../components/Button/Button';
 import Card from '../components/Card/Card';
+import SEO from '../components/SEO/SEO';
 
 const Courses = () => {
     const programs = [
@@ -46,6 +47,12 @@ const Courses = () => {
 
     return (
         <div className="courses-page pt-20">
+            <SEO
+                title="B.E. Civil Engineering & BBA Programs | BCEM Course Details"
+                description="Explore our 4-year B.E. Civil Engineering and BBA programs. Learn about curriculum, career prospects, and why BCEM is the right choice."
+                url="/courses"
+                keywords="civil engineering course, BBA course, engineering syllabus, management degree Nepal"
+            />
             {/* Hero Section */}
             <section className="relative py-20 gradient-primary overflow-hidden">
                 <div className="absolute inset-0 opacity-10">
