@@ -8,6 +8,7 @@ const SEO = ({
     image = '/logo.jpeg',
     url = 'https://bcem.edu.np',
     type = 'website',
+    schema = null,
 }) => {
     // Ensure full URL for image
     const fullImageUrl = image.startsWith('http') ? image : `https://bcem.edu.np${image}`;
@@ -44,6 +45,13 @@ const SEO = ({
             <meta name="robots" content="index, follow" />
             <meta name="language" content="English" />
             <meta name="revisit-after" content="7 days" />
+
+            {/* Structured Data (JSON-LD) */}
+            {schema && (
+                <script type="application/ld+json">
+                    {JSON.stringify(schema)}
+                </script>
+            )}
         </Helmet>
     );
 };
@@ -55,6 +63,7 @@ SEO.propTypes = {
     image: PropTypes.string,
     url: PropTypes.string,
     type: PropTypes.string,
+    schema: PropTypes.object,
 };
 
 export default SEO;

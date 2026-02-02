@@ -74,8 +74,40 @@ const Admissions = () => {
         },
     ];
 
+    // Transform FAQ data to JSON-LD Schema
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqData.map(item => {
+            // Handle structured answers (object with intro, list, conclusion)
+            let answerText = "";
+            if (typeof item.answer === 'string') {
+                answerText = item.answer;
+            } else {
+                const listItems = item.answer.list.map(li => `<li>${li}</li>`).join('');
+                answerText = `<p>${item.answer.intro}</p><ul>${listItems}</ul><p>${item.answer.conclusion || ''}</p>`;
+            }
+
+            return {
+                "@type": "Question",
+                "name": item.question,
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": answerText
+                }
+            };
+        })
+    };
+
     return (
         <div className="admissions-page pt-20">
+            <SEO
+                title="Admissions 2026 - B.E. Civil & BBA Programs | BCEM"
+                description="Apply now for B.E. Civil Engineering and BBA programs at BCEM. Learn about eligibility, fees, and admission process. Scholarship available."
+                url="/admissions"
+                keywords="BCEM admission, engineering admission Nepal, BBA admission Nepalgunj, scholarship in engineering"
+                schema={faqSchema}
+            />
             {/* Hero Section */}
             <section className="relative py-20 gradient-primary overflow-hidden">
                 <div className="absolute inset-0 opacity-10">

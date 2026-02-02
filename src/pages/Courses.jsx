@@ -2,8 +2,15 @@ import { Link } from 'react-router-dom';
 import Button from '../components/Button/Button';
 import Card from '../components/Card/Card';
 import SEO from '../components/SEO/SEO';
+import { civilEngineeringSchema, bbaSchema } from '../data/schemaData';
 
 const Courses = () => {
+    // Combine schemas into a single graph
+    const coursesSchema = {
+        "@context": "https://schema.org",
+        "@graph": [civilEngineeringSchema, bbaSchema]
+    };
+
     const programs = [
         {
             id: 1,
@@ -52,6 +59,7 @@ const Courses = () => {
                 description="Explore our 4-year B.E. Civil Engineering and BBA programs. Learn about curriculum, career prospects, and why BCEM is the right choice."
                 url="/courses"
                 keywords="civil engineering course, BBA course, engineering syllabus, management degree Nepal"
+                schema={coursesSchema}
             />
             {/* Hero Section */}
             <section className="relative py-20 gradient-primary overflow-hidden">

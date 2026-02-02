@@ -7,6 +7,7 @@ import Card from '../components/Card/Card';
 import Testimonials from '../components/Testimonials/Testimonials';
 import { testimonialsData } from '../data/testimonialsData';
 import SEO from '../components/SEO/SEO';
+import { organizationSchema } from '../data/schemaData';
 
 const Home = () => {
     const [statsRef, statsInView] = useInView({
@@ -79,12 +80,35 @@ const Home = () => {
         },
     ];
 
+    // Transform Testimonials to Review Schema
+    const reviews = testimonialsData.map(t => ({
+        "@type": "Review",
+        "author": { "@type": "Person", "name": t.name },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+        "reviewBody": t.text,
+        "itemReviewed": {
+            "@type": "EducationalOrganization",
+            "name": "Bheri College of Engineering and Management",
+            "image": "https://bcem.edu.np/logo.jpeg"
+        }
+    }));
+
+    // Combine Organization and Reviews into a Graph
+    const homeSchema = {
+        "@context": "https://schema.org",
+        "@graph": [
+            organizationSchema,
+            ...reviews
+        ]
+    };
+
     return (
         <div className="home-page pt-20">
             <SEO
                 title="BCEM - Bheri College of Engineering & Management | Top College in Nepalgunj"
                 description="Join BCEM for B.E. Civil Engineering and BBA programs. Quality education, modern facilities, experienced faculty. Admissions open for 2026."
                 keywords="BCEM, civil engineering Nepalgunj, BBA college, engineering college Nepal, Bheri College"
+                schema={homeSchema}
             />
             {/* Hero Section */}
             <section className="relative min-h-[90vh] flex items-center gradient-primary overflow-hidden">
