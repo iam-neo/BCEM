@@ -111,14 +111,14 @@ const Home = () => {
                 schema={homeSchema}
             />
             {/* Hero Section */}
-            <section className="relative min-h-[90vh] flex items-center gradient-primary overflow-hidden">
+            <section className="relative py-12 lg:py-20 gradient-primary overflow-hidden">
                 {/* Background Pattern */}
                 <div className="absolute inset-0 opacity-10">
                     <div className="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
                     <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary-yellow rounded-full blur-3xl"></div>
                 </div>
 
-                <div className="container-custom relative z-10 pt-24">
+                <div className="container-custom relative z-10">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div className="text-white animate-fade-up">
                             <div className="flex items-center gap-3 mb-6">
