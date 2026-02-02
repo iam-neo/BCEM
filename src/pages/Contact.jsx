@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Button from '../components/Button/Button';
 import Card from '../components/Card/Card';
+import SEO from '../components/SEO/SEO';
 
 const Contact = () => {
     const [formData, setFormData] = useState({

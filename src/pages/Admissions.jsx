@@ -75,17 +75,21 @@ const Admissions = () => {
     ];
 
     // Transform FAQ data to JSON-LD Schema
+    const allQuestions = faqData.flatMap(category => category.questions);
+
     const faqSchema = {
         "@context": "https://schema.org",
         "@type": "FAQPage",
-        "mainEntity": faqData.map(item => {
+        "mainEntity": allQuestions.map(item => {
             // Handle structured answers (object with intro, list, conclusion)
             let answerText = "";
             if (typeof item.answer === 'string') {
                 answerText = item.answer;
             } else {
-                const listItems = item.answer.list.map(li => `<li>${li}</li>`).join('');
-                answerText = `<p>${item.answer.intro}</p><ul>${listItems}</ul><p>${item.answer.conclusion || ''}</p>`;
+                const listItems = item.answer.list ? item.answer.list.map(li => `<li>${li}</li>`).join('') : '';
+                const intro = item.answer.intro ? `<p>${item.answer.intro}</p>` : '';
+                const conclusion = item.answer.conclusion ? `<p>${item.answer.conclusion}</p>` : '';
+                answerText = `${intro}${listItems ? `<ul>${listItems}</ul>` : ''}${conclusion}`;
             }
 
             return {

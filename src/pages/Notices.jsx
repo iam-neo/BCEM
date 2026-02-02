@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Card from '../components/Card/Card';
 import { NoticeSkeleton } from '../components/Skeleton/Skeleton';
+import SEO from '../components/SEO/SEO';
 
 const Notices = () => {
     const [loading, setLoading] = useState(true);

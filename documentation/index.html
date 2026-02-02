@@ -321,7 +321,37 @@ function App() {
                     <li><strong>Hero Section</strong>: Redesigned Home page Hero spacing for tighter, cleaner alignment
                         (removed layout gaps).</li>
                     <li><strong>Build Stability</strong>: Fixed Vite build errors (<code>prop-types</code> dependency,
-                        <code>style jsx</code> syntax).</li>
+                        <code>style jsx</code> syntax).
+                    </li>
+                </ul>
+
+                <h4>🛠️ Technical Challenges & Resolutions (Dev Log)</h4>
+                <ul>
+                    <li><strong>Challenge 1: Build Failure on SEO Component</strong>
+                        <br><em>Issue:</em> Build failed due to missing <code>prop-types</code> package.
+                        <br><em>Fix:</em> Installed <code>prop-types</code> dependency to resolve import errors.
+                    </li>
+                    <li><strong>Challenge 2: Invalid Syntax in Testimonials</strong>
+                        <br><em>Issue:</em> Component used Next.js-specific <code>&lt;style jsx&gt;</code> tags
+                        incompatible with Vite.
+                        <br><em>Fix:</em> Refactored styles into a separate CSS file (<code>Testimonials.css</code>).
+                    </li>
+                    <li><strong>Challenge 3: Hero Section Misalignment</strong>
+                        <br><em>Issue:</em> <code>min-h-[90vh]</code> caused large vertical gaps, pushing content down.
+                        <br><em>Fix:</em> Removed height constraint and optimized padding (<code>py-12 lg:py-20</code>)
+                        to match design reference.
+                    </li>
+                    <li><strong>Challenge 4: Admissions Page Runtime Crash</strong>
+                        <br><em>Issue:</em> Schema logic attempted to access properties on undefined objects due to
+                        nesting.
+                        <br><em>Fix:</em> Flattened <code>faqData</code> structure using <code>flatMap</code> before
+                        mapping to JSON-LD.
+                    </li>
+                    <li><strong>Challenge 5: Missing Imports in New Pages</strong>
+                        <br><em>Issue:</em> Notices and Contact pages failed to render due to missing <code>SEO</code>
+                        component import.
+                        <br><em>Fix:</em> Added missing import statements for <code>SEO</code>.
+                    </li>
                 </ul>
 
                 <h3>v1.1.0 - 2026-02-01</h3>
