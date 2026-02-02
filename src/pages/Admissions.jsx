@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import Button from '../components/Button/Button';
 import Card from '../components/Card/Card';
+import FAQ from '../components/FAQ/FAQ';
+import { faqData } from '../data/faqData';
 
 const Admissions = () => {
     const steps = [
@@ -200,6 +202,19 @@ const Admissions = () => {
                             />
                         </div>
                     </div>
+                </div>
+            </section>
+
+            {/* FAQ Section */}
+            <section className="section bg-gray-50 dark:bg-gray-900">
+                <div className="container-custom">
+                    <div className="text-center mb-12">
+                        <h2 className="section-title">Frequently Asked Questions</h2>
+                        <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                            Find answers to common questions about admissions, fees, and our programs.
+                        </p>
+                    </div>
+                    <FAQ data={faqData} />
                 </div>
             </section>
 
