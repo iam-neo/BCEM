@@ -28,6 +28,7 @@
                 <a href="#overview" class="active">Overview</a>
                 <a href="#installation">Installation</a>
                 <a href="#project-structure">Project Structure</a>
+                <a href="#changelog">Changelog</a>
             </div>
 
             <div class="nav-group">
@@ -70,7 +71,8 @@
                 <h2>Project Overview</h2>
                 <p>The BCEM website is a modern Single Page Application (SPA) built with <strong>React</strong> and
                     <strong>Vite</strong>. It emphasizes performance, modularity, and a premium "University" aesthetic
-                    using Tailwind CSS.</p>
+                    using Tailwind CSS.
+                </p>
                 <div class="tech-stack">
                     <span class="badg react">React 18</span>
                     <span class="badg vite">Vite</span>
@@ -145,7 +147,8 @@ createRoot(document.getElementById('root')).render(
                 <h3>Layout Architecture (App.jsx)</h3>
                 <p>The <code>App</code> component acts as the <strong>Layout Shell</strong>. It keeps the
                     <code>Navbar</code> and <code>Footer</code> persistent while only changing the content inside
-                    <code>Routes</code> based on the URL.</p>
+                    <code>Routes</code> based on the URL.
+                </p>
                 <div class="code-block">
                     <pre><code class="language-jsx">// src/App.jsx
 function App() {
@@ -189,7 +192,8 @@ function App() {
                 <h2>Component Logic: Card</h2>
                 <p>The <code>Card</code> uses the <strong>Compound Component Pattern</strong>. Instead of one giant
                     component with 50 props, it exposes sub-components (<code>Card.Image</code>,
-                    <code>Card.Title</code>) attached to the main <code>Card</code> function.</p>
+                    <code>Card.Title</code>) attached to the main <code>Card</code> function.
+                </p>
 
                 <h3>Usage Pattern</h3>
                 <div class="code-block">
@@ -212,7 +216,8 @@ function App() {
                 <h3>Why an API is needed?</h3>
                 <p>Even for local testing, the React Frontend (Client) must communicate with the Backend (Server) via an
                     <strong>API</strong>. This is because React runs in the browser environment (even on localhost) and
-                    cannot securely access the database directly.</p>
+                    cannot securely access the database directly.
+                </p>
 
                 <h3>Decoupled Architecture</h3>
                 <ul>
@@ -235,7 +240,8 @@ function App() {
                     <li>User logs in via React Form.</li>
                     <li>Backend verifies credentials and checks the <code>role</code> column in the database.</li>
                     <li>Backend returns a secure <strong>Token</strong> (JWT) containing the role (e.g.,
-                        <code>role: 'TEACHER'</code>).</li>
+                        <code>role: 'TEACHER'</code>).
+                    </li>
                     <li>React saves the token and uses "Protected Routes" to allow/deny access to specific pages.</li>
                 </ol>
 
@@ -279,6 +285,30 @@ function App() {
                     <li>Converted config files (<code>tailwind.config.js</code>) to CommonJS (<code>.cjs</code>) for
                         better compatibility with Vercel's build environment.</li>
                 </ol>
+            </section>
+
+            <!-- Changelog -->
+            <section id="changelog">
+                <h2>Changelog</h2>
+                <p>All notable changes to this project will be documented in this section.</p>
+
+                <h3>v1.1.0 - 2026-02-01</h3>
+                <h4>✨ New Features</h4>
+                <ul>
+                    <li><strong>Dark Mode</strong>: Implemented system-aware dark mode with toggle and persistence.</li>
+                    <li><strong>Animated Statistics</strong>: Added count-up animation for homepage statistics.</li>
+                    <li><strong>Notices Filtering</strong>: Category-based filtering (Exam, Event, Holiday) for notices.
+                    </li>
+                    <li><strong>Scroll to Top</strong>: Floating button to quickly return to the top of the page.</li>
+                    <li><strong>Loading Skeletons</strong>: Improved perceived performance during data loading.</li>
+                </ul>
+
+                <h4>🐛 Bug Fixes</h4>
+                <ul>
+                    <li><strong>Mobile Navbar</strong>: Fixed college name positioning on mobile.</li>
+                    <li><strong>Scroll Indicator</strong>: Removed scroll-down animation from homepage.</li>
+                    <li><strong>Blank Page State</strong>: Fix for missing initial category state.</li>
+                </ul>
             </section>
         </main>
     </div>
