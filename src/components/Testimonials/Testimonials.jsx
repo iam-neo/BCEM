@@ -7,6 +7,8 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
+import './Testimonials.css';
+
 const Testimonials = ({ data }) => {
     return (
         <div className="w-full">
@@ -47,52 +49,6 @@ const Testimonials = ({ data }) => {
                     </SwiperSlide>
                 ))}
             </Swiper>
-
-            {/* Custom Swiper Styles */}
-            <style jsx>{`
-                .testimonials-swiper {
-                    padding-left: 10px;
-                    padding-right: 10px;
-                }
-
-                :global(.testimonials-swiper .swiper-button-next),
-                :global(.testimonials-swiper .swiper-button-prev) {
-                    color: var(--primary-blue, #1e40af);
-                    background: white;
-                    width: 40px;
-                    height: 40px;
-                    border-radius: 50%;
-                    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-                }
-
-                :global(.dark .testimonials-swiper .swiper-button-next),
-                :global(.dark .testimonials-swiper .swiper-button-prev) {
-                    background: #1f2937;
-                    color: #60a5fa;
-                }
-
-                :global(.testimonials-swiper .swiper-button-next:after),
-                :global(.testimonials-swiper .swiper-button-prev:after) {
-                    font-size: 18px;
-                    font-weight: bold;
-                }
-
-                :global(.testimonials-swiper .swiper-pagination-bullet) {
-                    width: 10px;
-                    height: 10px;
-                    background: var(--primary-blue, #1e40af);
-                    opacity: 0.3;
-                }
-
-                :global(.testimonials-swiper .swiper-pagination-bullet-active) {
-                    opacity: 1;
-                    background: var(--primary-blue, #1e40af);
-                }
-
-                :global(.dark .testimonials-swiper .swiper-pagination-bullet) {
-                    background: #60a5fa;
-                }
-            `}</style>
         </div>
     );
 };
