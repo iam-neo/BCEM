@@ -46,7 +46,7 @@ const Contact = () => {
         {
             icon: '✉️',
             title: 'Email Us',
-            details: ['info@bcem.edu.np', 'admission@bcem.edu.np'],
+            details: ['bcem2081@gmail.com', '+977-81-534570, +977-81-535570'],
         },
         {
             icon: '🕐',

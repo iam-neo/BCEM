@@ -140,14 +140,14 @@ const Admissions = () => {
                             <Card.Body>
                                 <div className="text-4xl mb-3">📞</div>
                                 <Card.Title className="text-lg">Admission Helpline</Card.Title>
-                                <Card.Text className="text-primary-blue font-semibold">+977-81-XXXXXX</Card.Text>
+                                <Card.Text className="text-primary-blue font-semibold">+977-81-534570</Card.Text>
                             </Card.Body>
                         </Card>
                         <Card className="text-center">
                             <Card.Body>
                                 <div className="text-4xl mb-3">📧</div>
                                 <Card.Title className="text-lg">Email Us</Card.Title>
-                                <Card.Text className="text-primary-blue font-semibold">admission@bcem.edu.np</Card.Text>
+                                <Card.Text className="text-primary-blue font-semibold">bcem2081@gmail.com</Card.Text>
                             </Card.Body>
                         </Card>
                     </div>

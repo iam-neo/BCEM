@@ -29,7 +29,7 @@ export const faqData = [
             {
                 id: 'adm-4',
                 question: 'When does the admission process start?',
-                answer: 'The admission process typically begins in June/July each year. Application forms are available online and at the college campus. For exact dates, please check our Notices page or contact the admission office at +977-81-123456.'
+                answer: 'The admission process typically begins in June/July each year. Application forms are available online and at the college campus. For exact dates, please check our Notices page or contact the admission office at +977-81-534570.'
             },
             {
                 id: 'adm-5',

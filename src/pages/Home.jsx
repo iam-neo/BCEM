@@ -7,7 +7,7 @@ import Card from '../components/Card/Card';
 import Testimonials from '../components/Testimonials/Testimonials';
 import { testimonialsData } from '../data/testimonialsData';
 import SEO from '../components/SEO/SEO';
-import { organizationSchema } from '../data/schemaData';
+import { organizationSchema, localBusinessSchema } from '../data/schemaData';
 
 const Home = () => {
     const [statsRef, statsInView] = useInView({
@@ -89,15 +89,16 @@ const Home = () => {
         "itemReviewed": {
             "@type": "EducationalOrganization",
             "name": "Bheri College of Engineering and Management",
-            "image": "https://bcem.edu.np/logo.jpeg"
+            "image": "https://bcem.vercel.app/logo.jpeg"
         }
     }));
 
-    // Combine Organization and Reviews into a Graph
+    // Combine Organization, LocalBusiness and Reviews into a Graph
     const homeSchema = {
         "@context": "https://schema.org",
         "@graph": [
             organizationSchema,
+            localBusinessSchema,
             ...reviews
         ]
     };

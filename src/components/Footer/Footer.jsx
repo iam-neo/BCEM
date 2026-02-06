@@ -125,7 +125,7 @@ const Footer = () => {
                             </li>
                             <li className="flex items-center gap-3 text-sm text-gray-300">
                                 <span className="text-xl">✉️</span>
-                                <span>info@bcem.edu.np</span>
+                                <span>bcem2081@gmail.com</span>
                             </li>
                             <li className="flex items-center gap-3 text-sm text-gray-300">
                                 <span className="text-xl">🕐</span>

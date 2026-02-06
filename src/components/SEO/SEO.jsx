@@ -6,13 +6,13 @@ const SEO = ({
     description = 'Join BCEM for B.E. Civil Engineering and BBA programs. Quality education, modern facilities, experienced faculty in Nepalgunj, Nepal.',
     keywords = 'BCEM, civil engineering, BBA, Nepalgunj, engineering college Nepal, business administration',
     image = '/og-image.jpg',
-    url = 'https://bcem.edu.np',
+    url = 'https://bcem.vercel.app',
     type = 'website',
     schema = null,
 }) => {
     // Ensure full URL for image
-    const fullImageUrl = image.startsWith('http') ? image : `https://bcem.edu.np${image}`;
-    const fullUrl = url.startsWith('http') ? url : `https://bcem.edu.np${url}`;
+    const fullImageUrl = image.startsWith('http') ? image : `https://bcem.vercel.app${image}`;
+    const fullUrl = url.startsWith('http') ? url : `https://bcem.vercel.app${url}`;
 
     return (
         <Helmet>

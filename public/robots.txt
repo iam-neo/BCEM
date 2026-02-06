@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://bcem.edu.np/sitemap.xml
+Sitemap: https://bcem.vercel.app/sitemap.xml
