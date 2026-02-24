@@ -144,8 +144,8 @@ const Footer = () => {
                             © {currentYear} Bheri College of Engineering and Management. All rights reserved.
                         </p>
                         <div className="flex items-center gap-6 text-sm text-gray-400">
-                            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-                            <a href="#" className="hover:text-white transition-colors">Terms of Use</a>
+                            <Link to="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
+                            <Link to="/terms-of-use" className="hover:text-white transition-colors">Terms of Use</Link>
                         </div>
                     </div>
                 </div>

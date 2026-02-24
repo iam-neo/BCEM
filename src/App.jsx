@@ -12,6 +12,8 @@ const Courses = lazy(() => import('./pages/Courses'));
 const Admissions = lazy(() => import('./pages/Admissions'));
 const Notices = lazy(() => import('./pages/Notices'));
 const Contact = lazy(() => import('./pages/Contact'));
+const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
+const TermsOfUse = lazy(() => import('./pages/TermsOfUse'));
 
 // Loading Fallback Component
 const PageLoader = () => (
@@ -33,6 +35,8 @@ function App() {
                         <Route path="/admissions" element={<Admissions />} />
                         <Route path="/notices" element={<Notices />} />
                         <Route path="/contact" element={<Contact />} />
+                        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                        <Route path="/terms-of-use" element={<TermsOfUse />} />
                     </Routes>
                 </Suspense>
             </main>
