@@ -5,7 +5,7 @@ export const faqData = [
         questions: [
             {
                 id: 'adm-1',
-                question: 'What is the admission process for BCEM?',
+                question: 'What is the admission process for ECEM?',
                 answer: {
                     intro: 'The admission process consists of three main steps:',
                     list: [
@@ -19,7 +19,7 @@ export const faqData = [
             {
                 id: 'adm-2',
                 question: 'What are the eligibility criteria for B.E. Civil Engineering?',
-                answer: 'Candidates must have completed 10+2 or equivalent with Physics, Chemistry, and Mathematics as core subjects with a minimum of 45% aggregate marks (40% for reserved categories). Candidates must also appear for the IOE entrance examination and qualify based on merit.'
+                answer: 'Candidates must have completed 10+2 or equivalent with Physics, Chemistry, and Mathematics as core subjects with a minimum of 45% aggregate marks (40% for reserved categories). Candidates must also appear for the entrance examination and qualify based on merit.'
             },
             {
                 id: 'adm-3',
@@ -29,7 +29,7 @@ export const faqData = [
             {
                 id: 'adm-4',
                 question: 'When does the admission process start?',
-                answer: 'The admission process typically begins in June/July each year. Application forms are available online and at the college campus. For exact dates, please check our Notices page or contact the admission office at +977-81-534570.'
+                answer: 'The admission process typically begins in June/July each year. Application forms are available online and at the college campus. For exact dates, please check our Notices page or contact the admission office at +977-XX-XXXXXX.'
             },
             {
                 id: 'adm-5',
@@ -86,7 +86,7 @@ export const faqData = [
             {
                 id: 'cam-2',
                 question: 'What facilities are available in the college?',
-                answer: 'BCEM offers state-of-the-art facilities including modern computer labs with latest software, well-equipped engineering workshops, a comprehensive library with digital resources, sports facilities, cafeteria, medical room, and high-speed internet throughout the campus.'
+                answer: 'ECEM offers state-of-the-art facilities including modern computer labs with latest software, well-equipped engineering workshops, a comprehensive library with digital resources, sports facilities, cafeteria, medical room, and high-speed internet throughout the campus.'
             },
             {
                 id: 'cam-3',
@@ -96,7 +96,7 @@ export const faqData = [
             {
                 id: 'cam-4',
                 question: 'Are there transportation facilities?',
-                answer: 'The college is well-connected by local transportation. We also provide a college bus service covering major routes in Nepalgunj. Students can avail of the bus service by paying a nominal monthly fee. Bicycle and motorcycle parking facilities are also available.'
+                answer: 'The college is well-connected by local transportation. We also provide a college bus service covering major routes in the city. Students can avail of the bus service by paying a nominal monthly fee. Bicycle and motorcycle parking facilities are also available.'
             },
             {
                 id: 'cam-5',
@@ -112,12 +112,12 @@ export const faqData = [
             {
                 id: 'aca-1',
                 question: 'What is the duration of the B.E. Civil Engineering program?',
-                answer: 'The B.E. Civil Engineering program is a 4-year undergraduate degree program (8 semesters) affiliated to Far-western University. The program includes theoretical courses, practical lab work, project work, and industrial training.'
+                answer: 'The B.E. Civil Engineering program is a 4-year undergraduate degree program (8 semesters) affiliated to National University. The program includes theoretical courses, practical lab work, project work, and industrial training.'
             },
             {
                 id: 'aca-2',
                 question: 'What is the duration of the BBA program?',
-                answer: 'The BBA program is a 4-year undergraduate degree program (8 semesters) affiliated to Far-western University. The program covers core business subjects, practical case studies, internships, and a final year project.'
+                answer: 'The BBA program is a 4-year undergraduate degree program (8 semesters) affiliated to National University. The program covers core business subjects, practical case studies, internships, and a final year project.'
             },
             {
                 id: 'aca-3',

@@ -46,7 +46,7 @@ const Notices = () => {
             date: '2026-01-18',
             category: 'Event',
             priority: 'normal',
-            content: 'An industrial visit to leading business organizations in Nepalgunj is scheduled for BBA 3rd semester students on January 30, 2026.',
+            content: 'An industrial visit to leading business organizations in the city is scheduled for BBA 3rd semester students on January 30, 2026.',
         },
         {
             id: 6,
@@ -95,8 +95,8 @@ const Notices = () => {
     return (
         <div className="notices-page pt-20">
             <SEO
-                title="Latest Notices & Announcements | BCEM"
-                description="Stay updated with latest notices, exam schedules, and important announcements from BCEM. Check admission updates and academic calendar."
+                title="Latest Notices & Announcements | ECEM"
+                description="Stay updated with latest notices, exam schedules, and important announcements from ECEM. Check admission updates and academic calendar."
                 url="/notices"
             />
             {/* Hero Section */}
@@ -107,7 +107,7 @@ const Notices = () => {
                 <div className="container-custom relative z-10 text-center text-white">
                     <h1 className="text-4xl md:text-5xl font-heading font-bold text-white mb-4">Notices & Announcements</h1>
                     <p className="text-lg text-gray-200 max-w-2xl mx-auto">
-                        Stay updated with the latest news, events, and important announcements from BCEM.
+                        Stay updated with the latest news, events, and important announcements from ECEM.
                     </p>
                 </div>
             </section>

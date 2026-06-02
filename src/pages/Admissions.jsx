@@ -106,10 +106,10 @@ const Admissions = () => {
     return (
         <div className="admissions-page pt-20">
             <SEO
-                title="Admissions 2026 - B.E. Civil & BBA Programs | BCEM"
-                description="Apply now for B.E. Civil Engineering and BBA programs at BCEM. Learn about eligibility, fees, and admission process. Scholarship available."
+                title="Admissions 2026 - B.E. Civil & BBA Programs | ECEM"
+                description="Apply now for B.E. Civil Engineering and BBA programs at ECEM. Learn about eligibility, fees, and admission process. Scholarship available."
                 url="/admissions"
-                keywords="BCEM admission, engineering admission Nepal, BBA admission Nepalgunj, scholarship in engineering"
+                keywords="ECEM admission, engineering admission Nepal, BBA admission, scholarship in engineering"
                 schema={faqSchema}
             />
             {/* Hero Section */}
@@ -120,7 +120,7 @@ const Admissions = () => {
                 <div className="container-custom relative z-10 text-center text-white">
                     <h1 className="text-4xl md:text-5xl font-heading font-bold text-white mb-4">Admissions</h1>
                     <p className="text-lg text-gray-200 max-w-2xl mx-auto">
-                        Join BCEM and take the first step towards a successful career in Engineering or Business.
+                        Join ECEM and take the first step towards a successful career in Engineering or Business.
                     </p>
                 </div>
             </section>
@@ -140,14 +140,14 @@ const Admissions = () => {
                             <Card.Body>
                                 <div className="text-4xl mb-3">📞</div>
                                 <Card.Title className="text-lg">Admission Helpline</Card.Title>
-                                <Card.Text className="text-primary-blue font-semibold">+977-81-534570</Card.Text>
+                                <Card.Text className="text-primary-blue font-semibold">+977-XX-XXXXXX</Card.Text>
                             </Card.Body>
                         </Card>
                         <Card className="text-center">
                             <Card.Body>
                                 <div className="text-4xl mb-3">📧</div>
                                 <Card.Title className="text-lg">Email Us</Card.Title>
-                                <Card.Text className="text-primary-blue font-semibold">bcem2081@gmail.com</Card.Text>
+                                <Card.Text className="text-primary-blue font-semibold">info@ecem-demo.edu.np</Card.Text>
                             </Card.Body>
                         </Card>
                     </div>
@@ -160,7 +160,7 @@ const Admissions = () => {
                     <div className="text-center mb-12">
                         <h2 className="section-title">Admission Process</h2>
                         <p className="text-gray-600 max-w-2xl mx-auto">
-                            Follow these simple steps to become a part of the BCEM family.
+                            Follow these simple steps to become a part of the ECEM family.
                         </p>
                     </div>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

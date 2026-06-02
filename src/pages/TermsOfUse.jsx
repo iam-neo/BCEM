@@ -31,7 +31,7 @@ const TermsOfUse = () => {
 
                     <h2>1. Acceptance of Terms</h2>
                     <p>
-                        By accessing and using the Bheri College of Engineering and Management (BCEM) website, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.
+                        By accessing and using the Everest College of Engineering and Management (ECEM) website, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.
                     </p>
 
                     <h2>2. Intellectual Property Rights</h2>
@@ -64,13 +64,13 @@ const TermsOfUse = () => {
                     <p>
                         In order to resolve a complaint regarding the Site or to receive further information regarding use of the Site, please contact us at:
                         <br /><br />
-                        Bheri College of Engineering and Management
+                        Everest College of Engineering and Management
                         <br />
-                        Nepalgunj, Banke
+                        Your City, Province
                         <br />
                         Nepal
                         <br />
-                        Email: bcem2081@gmail.com
+                        Email: info@ecem-demo.edu.np
                     </p>
                 </div>
             </div>

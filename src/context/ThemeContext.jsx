@@ -13,7 +13,7 @@ export const useTheme = () => {
 export const ThemeProvider = ({ children }) => {
     const [theme, setTheme] = useState(() => {
         // Check localStorage for saved theme preference
-        const savedTheme = localStorage.getItem('bcem-theme');
+        const savedTheme = localStorage.getItem('ecem-theme');
         return savedTheme || 'light';
     });
 
@@ -27,7 +27,7 @@ export const ThemeProvider = ({ children }) => {
         }
 
         // Save preference to localStorage
-        localStorage.setItem('bcem-theme', theme);
+        localStorage.setItem('ecem-theme', theme);
     }, [theme]);
 
     const toggleTheme = () => {

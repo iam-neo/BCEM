@@ -17,7 +17,7 @@ const Courses = () => {
             title: 'Bachelor of Civil Engineering',
             shortName: 'B.E. Civil',
             duration: '4 Years',
-            affiliation: 'Far-Western University',
+            affiliation: 'National University',
             seats: '48',
             image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&h=400&fit=crop',
             icon: '🏗️',
@@ -36,7 +36,7 @@ const Courses = () => {
             title: 'Bachelor of Business Administration (BBA)',
             shortName: 'BBA',
             duration: '4 Years',
-            affiliation: 'Far-Western University',
+            affiliation: 'National University',
             seats: '60',
             image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop',
             icon: '📊',
@@ -55,8 +55,8 @@ const Courses = () => {
     return (
         <div className="courses-page pt-20">
             <SEO
-                title="B.E. Civil Engineering & BBA Programs | BCEM Course Details"
-                description="Explore our 4-year B.E. Civil Engineering and BBA programs. Learn about curriculum, career prospects, and why BCEM is the right choice."
+                title="B.E. Civil Engineering & BBA Programs | ECEM Course Details"
+                description="Explore our 4-year B.E. Civil Engineering and BBA programs. Learn about curriculum, career prospects, and why ECEM is the right choice."
                 url="/courses"
                 keywords="civil engineering course, BBA course, engineering syllabus, management degree Nepal"
                 schema={coursesSchema}
@@ -190,7 +190,7 @@ const Courses = () => {
             <section className="py-16 gradient-primary text-white">
                 <div className="container-custom text-center">
                     <h2 className="text-2xl md:text-3xl font-heading font-bold text-white mb-4">
-                        Ready to Join BCEM?
+                        Ready to Join ECEM?
                     </h2>
                     <p className="text-gray-200 mb-6 max-w-xl mx-auto">
                         Start your journey towards a successful career. Apply for admission today.

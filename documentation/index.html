@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BCEM - Developer Documentation</title>
+    <title>ECEM - Developer Documentation</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
@@ -19,7 +19,7 @@
         <!-- Sidebar Navigation -->
         <nav class="sidebar">
             <div class="logo">
-                <h3>BCEM Docs</h3>
+                <h3>ECEM Docs</h3>
                 <span class="version">v1.0.0</span>
             </div>
 
@@ -70,14 +70,14 @@
             <!-- Header -->
             <header>
                 <h1>Developer Documentation</h1>
-                <p>Comprehensive guide to the Bheri College of Engineering and Management (BCEM) website architecture,
+                <p>Comprehensive guide to the Everest College of Engineering and Management (ECEM) website architecture,
                     code logic, and future backend roadmap.</p>
             </header>
 
             <!-- Overview -->
             <section id="overview">
                 <h2>Project Overview</h2>
-                <p>The BCEM website is a modern Single Page Application (SPA) built with <strong>React</strong> and
+                <p>The ECEM website is a modern Single Page Application (SPA) built with <strong>React</strong> and
                     <strong>Vite</strong>. It emphasizes performance, modularity, and a premium "University" aesthetic
                     using Tailwind CSS.
                 </p>
@@ -94,8 +94,8 @@
                 <p>Follow these steps to set up the project locally:</p>
                 <div class="code-block">
                     <pre><code class="language-bash"># 1. Clone the repository
-git clone https://github.com/iam-neo/BCEM.git
-cd BCEM
+git clone https://github.com/iam-neo/ECEM.git
+cd ECEM
 
 # 2. Install dependencies (Node.js 18+ required)
 npm install
@@ -313,31 +313,29 @@ function App() {
                     <li><strong>Google Search Console</strong>:
                         <ul>
                             <li>Added verification meta tag</li>
-                            <li>Configured for https://bcem.vercel.app</li>
+                            <li>Configured for https://ecem-demo.vercel.app</li>
                             <li>Ready for sitemap submission</li>
                         </ul>
                     </li>
                     <li><strong>Advanced Schema Markup</strong>:
                         <ul>
-                            <li>LocalBusiness schema with Nepalgunj geo-coordinates (28.0505, 81.6167)</li>
+                            <li>LocalBusiness schema with generic geo-coordinates (27.7172, 85.3240)</li>
                             <li>FAQ schema with 22 questions across 4 categories</li>
-                            <li>Enhanced Organization schema with real contact information</li>
+                            <li>Enhanced Organization schema with generic contact information</li>
                             <li>Course schemas for both B.E. Civil and BBA programs</li>
                             <li>Review schema integration from testimonials</li>
                         </ul>
                     </li>
                     <li><strong>URL Consistency</strong>:
                         <ul>
-                            <li>Updated 17 URL references from bcem.edu.np to bcem.vercel.app</li>
                             <li>Updated sitemap.xml with all 6 pages</li>
                             <li>Updated robots.txt sitemap reference</li>
                         </ul>
                     </li>
                     <li><strong>Contact Information Update</strong>:
                         <ul>
-                            <li>Primary phone: +977-81-534570</li>
-                            <li>Secondary phone: +977-81-535570</li>
-                            <li>Email: bcem2081@gmail.com</li>
+                            <li>Primary phone: +977-XX-XXXXXX</li>
+                            <li>Email: info@ecem-demo.edu.np</li>
                             <li>Updated across all pages and schemas</li>
                         </ul>
                     </li>
@@ -353,7 +351,7 @@ function App() {
 
                 <h4>🔧 Technical Improvements</h4>
                 <ul>
-                    <li><strong>Local SEO</strong>: Optimized for "college near me" searches in Nepalgunj</li>
+                    <li><strong>Local SEO</strong>: Optimized for local searches with geo-coordinates</li>
                     <li><strong>Rich Results Eligible</strong>: FAQ snippets, Organization knowledge panel</li>
                     <li><strong>Accessibility</strong>: Verified all images have descriptive alt text</li>
                     <li><strong>Sitemap Updated</strong>: Last modified dates set to 2026-02-06</li>
@@ -443,8 +441,8 @@ function App() {
             <!-- SEO & Analytics Section -->
             <section id="seo-overview">
                 <h2>SEO & Analytics Implementation</h2>
-                <p>The BCEM website is optimized for search engines with comprehensive SEO strategies including Google
-                    Analytics tracking, Schema.org markup, and local SEO optimization for Nepalgunj, Nepal.</p>
+                <p>The ECEM website is optimized for search engines with comprehensive SEO strategies including Google
+                    Analytics tracking, Schema.org markup, and local SEO optimization.</p>
 
                 <div class="tech-stack">
                     <span class="badg">Google Analytics 4</span>
@@ -459,7 +457,7 @@ function App() {
                     <li><strong>Analytics Integration</strong>: Full GA4 and Search Console tracking</li>
                     <li><strong>Schema Markup</strong>: Organization, LocalBusiness, Course, FAQ, and Review schemas
                     </li>
-                    <li><strong>Local Optimization</strong>: Geo-targeted for Nepalgunj with coordinates</li>
+                    <li><strong>Local Optimization</strong>: Geo-targeted with custom coordinates</li>
                     <li><strong>Technical SEO</strong>: Sitemap, robots.txt, canonical URLs, meta tags</li>
                     <li><strong>Content Quality</strong>: All images with alt text, rich FAQ content</li>
                 </ul>
@@ -513,24 +511,24 @@ function App() {
                     <pre><code class="language-javascript">export const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
-    "name": "Bheri College of Engineering and Management",
-    "alternateName": "BCEM",
-    "url": "https://bcem.vercel.app",
-    "telephone": "+977-81-534570",
-    "email": "bcem2081@gmail.com"
+    "name": "Everest College of Engineering and Management",
+    "alternateName": "ECEM",
+    "url": "https://ecem-demo.vercel.app",
+    "telephone": "+977-XX-XXXXXX",
+    "email": "info@ecem-demo.edu.np"
     // ... complete schema in file
 };</code></pre>
                 </div>
 
                 <h4>2. LocalBusiness Schema (Local SEO)</h4>
-                <p>Optimized for "college near me" searches in Nepalgunj.</p>
+                <p>Optimized for local searches.</p>
                 <div class="code-block">
                     <pre><code class="language-javascript">export const localBusinessSchema = {
     "@type": "CollegeOrUniversity",
     "geo": {
         "@type": "GeoCoordinates",
-        "latitude": "28.0505",
-        "longitude": "81.6167"  // Nepalgunj coordinates
+        "latitude": "27.7172",
+        "longitude": "85.3240"  // Generic coordinates
     },
     "openingHoursSpecification": [
         {
@@ -587,8 +585,8 @@ function App() {
                 <ol>
                     <li>Visit <a href="https://search.google.com/search-console" target="_blank">Google Search
                             Console</a></li>
-                    <li>Click "Verify" for property: <code>https://bcem.vercel.app</code></li>
-                    <li>Submit sitemap: <code>https://bcem.vercel.app/sitemap.xml</code></li>
+                    <li>Click "Verify" for property: <code>https://ecem-demo.vercel.app</code></li>
+                    <li>Submit sitemap: <code>https://ecem-demo.vercel.app/sitemap.xml</code></li>
                 </ol>
 
                 <h3>Sitemap</h3>
@@ -607,7 +605,7 @@ function App() {
                 <div class="code-block">
                     <pre><code>User-agent: *
 Allow: /
-Sitemap: https://bcem.vercel.app/sitemap.xml</code></pre>
+Sitemap: https://ecem-demo.vercel.app/sitemap.xml</code></pre>
                 </div>
 
                 <h3>SEO Component</h3>
@@ -640,14 +638,14 @@ Sitemap: https://bcem.vercel.app/sitemap.xml</code></pre>
                 <ul>
                     <li><strong>Primary Phone</strong>: +977-81-534570</li>
                     <li><strong>Secondary Phone</strong>: +977-81-535570</li>
-                    <li><strong>Email</strong>: bcem2081@gmail.com</li>
-                    <li><strong>Location</strong>: Nepalgunj, Banke, Nepal (Postal: 21900)</li>
+                    <li><strong>Email</strong>: info@ecem-demo.edu.np</li>
+                    <li><strong>Location</strong>: Your City, Province, Nepal</li>
                 </ul>
 
                 <h3>Current Deployment URL</h3>
-                <p><code>https://bcem.vercel.app</code></p>
-                <p><em>Note: All 17 URL references throughout the codebase point to this deployment URL. If migrating to
-                        custom domain <code>bcem.edu.np</code>, update URLs in:</em></p>
+                <p><code>https://ecem-demo.vercel.app</code></p>
+                <p><em>Note: All URL references throughout the codebase point to this deployment URL. If migrating to
+                        custom domain <code>ecem.edu.np</code>, update URLs in:</em></p>
                 <ul>
                     <li>sitemap.xml</li>
                     <li>robots.txt</li>

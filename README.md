@@ -1,6 +1,6 @@
-# BCEM - Bheri College of Engineering and Management
+# ECEM - Everest College of Engineering and Management
 
-A modern, responsive website for Bheri College of Engineering & Management (BCEM), built with React and Tailwind CSS.
+A modern, responsive website for Everest College of Engineering & Management (ECEM), built with React and Tailwind CSS.
 
 ![React](https://img.shields.io/badge/React-18.3-blue?logo=react)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38B2AC?logo=tailwindcss)
@@ -9,7 +9,7 @@ A modern, responsive website for Bheri College of Engineering & Management (BCEM
 
 ## 🎓 About
 
-This is the official website for BCEM located in Nepalgunj, Nepal. The site showcases:
+This is a premium demo website for ECEM. The site showcases:
 
 - **Bachelor of Civil Engineering** - 4-year program
 - **Bachelor of Business Administration (BBA)** - 4-year program
@@ -50,9 +50,9 @@ The build output will be in the `dist` folder.
 BCEM/
 ├── public/
 │   ├── building/
-│   │   └── building.jpeg      # Campus building photo
+│   │   └── building.png      # Campus building photo
 │   ├── program/               # Program-related images
-│   ├── logo.jpeg              # College logo
+│   ├── logo.png              # College logo
 │   ├── og-image.jpg           # Open Graph social sharing image
 │   ├── robots.txt             # Search engine crawler rules
 │   └── sitemap.xml            # XML sitemap for SEO
@@ -204,4 +204,4 @@ npm run build
 
 ## 📄 License
 
-© 2026 Bheri College of Engineering and Management. All rights reserved.
+© 2026 Everest College of Engineering and Management. All rights reserved.

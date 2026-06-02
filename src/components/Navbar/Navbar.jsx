@@ -44,16 +44,16 @@ const Navbar = () => {
                         onClick={closeMenu}
                     >
                         <img
-                            src="/logo.jpeg"
-                            alt="BCEM Logo"
+                            src="/logo.png"
+                            alt="ECEM Logo"
                             className="h-14 w-14 object-contain rounded-full shadow-md group-hover:shadow-lg transition-shadow"
                         />
                         <div className="block">
                             <span className="block text-xl font-heading font-bold text-navy dark:text-white">
-                                BCEM
+                                ECEM
                             </span>
                             <span className="block text-xs text-gray-600 dark:text-gray-300 leading-tight">
-                                Bheri College of Engineering<br className="hidden lg:block" /> &amp; Management
+                                Everest College of Engineering<br className="hidden lg:block" /> &amp; Management
                             </span>
                         </div>
                     </Link>

@@ -36,7 +36,7 @@ const Contact = () => {
         {
             icon: '📍',
             title: 'Visit Us',
-            details: ['Nepalgunj, Banke', 'Mid-Western Nepal'],
+            details: ['Your City, Province', 'Nepal'],
         },
         {
             icon: '📞',
@@ -46,7 +46,7 @@ const Contact = () => {
         {
             icon: '✉️',
             title: 'Email Us',
-            details: ['bcem2081@gmail.com', '+977-81-534570, +977-81-535570'],
+            details: ['info@ecem-demo.edu.np', '+977-XX-XXXXXX'],
         },
         {
             icon: '🕐',
@@ -58,8 +58,8 @@ const Contact = () => {
     return (
         <div className="contact-page pt-20">
             <SEO
-                title="Contact BCEM - Get in Touch | Nepalgunj, Nepal"
-                description="Contact BCEM for admissions, inquiries, and information. Visit us in Nepalgunj or reach us via phone and email."
+                title="Contact ECEM - Get in Touch | Nepal"
+                description="Contact ECEM for admissions, inquiries, and information. Visit our campus or reach us via phone and email."
                 url="/contact"
             />
             {/* Hero Section */}
@@ -204,7 +204,7 @@ const Contact = () => {
                                             Map Placeholder
                                         </p>
                                         <p className="text-gray-500 text-sm">
-                                            Nepalgunj, Banke, Nepal
+                                            Your City, Province, Nepal
                                         </p>
                                     </div>
                                 </div>

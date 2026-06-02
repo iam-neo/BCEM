@@ -1,29 +1,29 @@
 export const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
-    "name": "Bheri College of Engineering and Management",
-    "alternateName": "BCEM",
-    "url": "https://bcem.vercel.app",
-    "logo": "https://bcem.vercel.app/logo.jpeg",
-    "description": "Premier college offering B.E. Civil Engineering and BBA programs in Nepalgunj, Nepal.",
+    "name": "Everest College of Engineering and Management",
+    "alternateName": "ECEM",
+    "url": "https://ecem-demo.vercel.app",
+    "logo": "https://ecem-demo.vercel.app/logo.png",
+    "description": "Premier college offering B.E. Civil Engineering and BBA programs in Nepal.",
     "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Nepalgunj",
-        "addressLocality": "Nepalgunj",
-        "addressRegion": "Banke",
+        "streetAddress": "College Road",
+        "addressLocality": "Your City",
+        "addressRegion": "Province",
         "addressCountry": "NP"
     },
     "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+977-81-534570",
+        "telephone": "+977-XX-XXXXXX",
         "contactType": "Admissions",
         "areaServed": "NP",
         "availableLanguage": ["English", "Nepali"],
-        "email": "bcem2081@gmail.com"
+        "email": "info@ecem-demo.edu.np"
     },
     "sameAs": [
-        "https://www.facebook.com/bcem",
-        "https://www.instagram.com/bcem"
+        "https://www.facebook.com/ecem",
+        "https://www.instagram.com/ecem"
     ]
 };
 
@@ -31,11 +31,11 @@ export const civilEngineeringSchema = {
     "@context": "https://schema.org",
     "@type": "Course",
     "name": "Bachelor of Civil Engineering",
-    "description": "4-year undergraduate program in Civil Engineering affiliated with Far-Western University.",
+    "description": "4-year undergraduate program in Civil Engineering affiliated with National University.",
     "provider": {
         "@type": "EducationalOrganization",
-        "name": "Bheri College of Engineering and Management",
-        "sameAs": "https://bcem.vercel.app"
+        "name": "Everest College of Engineering and Management",
+        "sameAs": "https://ecem-demo.vercel.app"
     },
     "educationalLevel": "Undergraduate",
     "timeRequired": "P4Y",
@@ -46,11 +46,11 @@ export const bbaSchema = {
     "@context": "https://schema.org",
     "@type": "Course",
     "name": "Bachelor of Business Administration",
-    "description": "4-year undergraduate program in Business Administration affiliated with Far-Western University.",
+    "description": "4-year undergraduate program in Business Administration affiliated with National University.",
     "provider": {
         "@type": "EducationalOrganization",
-        "name": "Bheri College of Engineering and Management",
-        "sameAs": "https://bcem.vercel.app"
+        "name": "Everest College of Engineering and Management",
+        "sameAs": "https://ecem-demo.vercel.app"
     },
     "educationalLevel": "Undergraduate",
     "timeRequired": "P4Y",
@@ -61,27 +61,27 @@ export const bbaSchema = {
 export const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "CollegeOrUniversity",
-    "name": "Bheri College of Engineering and Management",
-    "alternateName": "BCEM",
-    "url": "https://bcem.vercel.app",
-    "logo": "https://bcem.vercel.app/logo.jpeg",
-    "image": "https://bcem.vercel.app/building/building.jpeg",
-    "description": "Premier college offering B.E. Civil Engineering and BBA programs in Nepalgunj, Nepal, affiliated with Far-western University.",
+    "name": "Everest College of Engineering and Management",
+    "alternateName": "ECEM",
+    "url": "https://ecem-demo.vercel.app",
+    "logo": "https://ecem-demo.vercel.app/logo.png",
+    "image": "https://ecem-demo.vercel.app/building/building.png",
+    "description": "Premier college offering B.E. Civil Engineering and BBA programs in Nepal, affiliated with National University.",
     "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Nepalgunj",
-        "addressLocality": "Nepalgunj",
-        "addressRegion": "Banke",
-        "postalCode": "21900",
+        "streetAddress": "College Road",
+        "addressLocality": "Your City",
+        "addressRegion": "Province",
+        "postalCode": "00000",
         "addressCountry": "NP"
     },
     "geo": {
         "@type": "GeoCoordinates",
-        "latitude": "28.0505",
-        "longitude": "81.6167"
+        "latitude": "27.7172",
+        "longitude": "85.3240"
     },
-    "telephone": "+977-81-534570",
-    "email": "bcem2081@gmail.com",
+    "telephone": "+977-XX-XXXXXX",
+    "email": "info@ecem-demo.edu.np",
     "openingHoursSpecification": [
         {
             "@type": "OpeningHoursSpecification",
@@ -91,7 +91,7 @@ export const localBusinessSchema = {
         }
     ],
     "sameAs": [
-        "https://www.facebook.com/bcem",
-        "https://www.instagram.com/bcem"
+        "https://www.facebook.com/ecem",
+        "https://www.instagram.com/ecem"
     ]
 };

@@ -35,8 +35,8 @@ const About = () => {
     return (
         <div className="about-page pt-20">
             <SEO
-                title="About BCEM - Premier Engineering & Management College in Nepalgunj"
-                description="Affiliated to Far-western University, BCEM offers quality education in Civil Engineering and Business Administration with modern facilities and expert faculty."
+                title="About ECEM - Premier Engineering & Management College in Nepal"
+                description="Affiliated to National University, ECEM offers quality education in Civil Engineering and Business Administration with modern facilities and expert faculty."
                 url="/about"
             />
             {/* Hero Section */}
@@ -59,8 +59,8 @@ const About = () => {
                         <div>
                             <h2 className="section-title text-left after:mx-0 after:ml-0">Our Story</h2>
                             <p className="text-gray-600 mb-6 leading-relaxed">
-                                Bheri College of Engineering & Management (BCEM) is a premier institution
-                                located in Nepalgunj, Nepal. Affiliated to Far-western University, we have
+                                Everest College of Engineering & Management (ECEM) is a premier institution
+                                located in Nepal. Affiliated to National University, we have
                                 been transforming lives through education since our establishment.
                             </p>
                             <p className="text-gray-600 mb-6 leading-relaxed">
@@ -71,14 +71,14 @@ const About = () => {
                             </p>
                             <p className="text-gray-600 leading-relaxed">
                                 With experienced faculty, modern infrastructure, and a supportive
-                                learning environment, BCEM is committed to nurturing the next generation
+                                learning environment, ECEM is committed to nurturing the next generation
                                 of engineers and business leaders.
                             </p>
                         </div>
                         <div className="relative">
                             <img
-                                src="/building/building.jpeg"
-                                alt="BCEM College Building"
+                                src="/building/building.png"
+                                alt="ECEM College Building"
                                 className="rounded-2xl shadow-xl w-full object-cover"
                                 loading="lazy"
                                 width="800"
@@ -86,10 +86,10 @@ const About = () => {
                             />
                             <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-xl p-6 max-w-xs">
                                 <div className="flex items-center gap-3">
-                                    <img src="/logo.jpeg" alt="BCEM" className="w-12 h-12 rounded-full" />
+                                    <img src="/logo.png" alt="ECEM" className="w-12 h-12 rounded-full" />
                                     <div>
-                                        <div className="font-bold text-navy">BCEM</div>
-                                        <div className="text-sm text-gray-500">Nepalgunj, Nepal</div>
+                                        <div className="font-bold text-navy">ECEM</div>
+                                        <div className="text-sm text-gray-500">Your City, Nepal</div>
                                     </div>
                                 </div>
                             </div>
@@ -150,7 +150,7 @@ const About = () => {
                     <div className="text-center mb-12">
                         <h2 className="section-title">Our Core Values</h2>
                         <p className="text-gray-600 max-w-2xl mx-auto">
-                            These values guide everything we do at BCEM.
+                            These values guide everything we do at ECEM.
                         </p>
                     </div>
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">

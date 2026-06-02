@@ -2,17 +2,17 @@ import { Helmet } from 'react-helmet-async';
 import PropTypes from 'prop-types';
 
 const SEO = ({
-    title = 'BCEM - Bheri College of Engineering & Management',
-    description = 'Join BCEM for B.E. Civil Engineering and BBA programs. Quality education, modern facilities, experienced faculty in Nepalgunj, Nepal.',
-    keywords = 'BCEM, civil engineering, BBA, Nepalgunj, engineering college Nepal, business administration',
+    title = 'ECEM - Everest College of Engineering & Management',
+    description = 'Join ECEM for B.E. Civil Engineering and BBA programs. Quality education, modern facilities, experienced faculty in Nepal.',
+    keywords = 'ECEM, civil engineering, BBA, engineering college Nepal, business administration',
     image = '/og-image.jpg',
-    url = 'https://bcem.vercel.app',
+    url = 'https://ecem-demo.vercel.app',
     type = 'website',
     schema = null,
 }) => {
     // Ensure full URL for image
-    const fullImageUrl = image.startsWith('http') ? image : `https://bcem.vercel.app${image}`;
-    const fullUrl = url.startsWith('http') ? url : `https://bcem.vercel.app${url}`;
+    const fullImageUrl = image.startsWith('http') ? image : `https://ecem-demo.vercel.app${image}`;
+    const fullUrl = url.startsWith('http') ? url : `https://ecem-demo.vercel.app${url}`;
 
     return (
         <Helmet>
@@ -31,7 +31,7 @@ const SEO = ({
             <meta property="og:title" content={title} />
             <meta property="og:description" content={description} />
             <meta property="og:image" content={fullImageUrl} />
-            <meta property="og:site_name" content="BCEM" />
+            <meta property="og:site_name" content="ECEM" />
 
             {/* Twitter */}
             <meta name="twitter:card" content="summary_large_image" />
@@ -41,7 +41,7 @@ const SEO = ({
             <meta name="twitter:image" content={fullImageUrl} />
 
             {/* Additional Meta Tags */}
-            <meta name="author" content="BCEM - Bheri College of Engineering & Management" />
+            <meta name="author" content="ECEM - Everest College of Engineering & Management" />
             <meta name="robots" content="index, follow" />
             <meta name="language" content="English" />
             <meta name="revisit-after" content="7 days" />

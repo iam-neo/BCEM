@@ -25,18 +25,18 @@ const Footer = () => {
                     <div className="lg:col-span-1">
                         <div className="flex items-center gap-3 mb-6">
                             <img
-                                src="/logo.jpeg"
-                                alt="BCEM Logo"
+                                src="/logo.png"
+                                alt="ECEM Logo"
                                 className="h-16 w-16 object-contain rounded-full border-2 border-white/20"
                             />
                             <div>
-                                <h3 className="text-2xl font-heading font-bold text-white">BCEM</h3>
-                                <p className="text-sm text-gray-300">Nepalgunj, Nepal</p>
-                                <p className="text-xs text-primary-yellow mt-1">Affiliated to Far-western University</p>
+                                <h3 className="text-2xl font-heading font-bold text-white">ECEM</h3>
+                                <p className="text-sm text-gray-300">Your City, Nepal</p>
+                                <p className="text-xs text-primary-yellow mt-1">Affiliated to National University</p>
                             </div>
                         </div>
                         <p className="text-gray-300 text-sm leading-relaxed mb-6">
-                            Bheri College of Engineering & Management - Empowering students with quality education
+                            Everest College of Engineering & Management - Empowering students with quality education
                             in Engineering and Management for a brighter future.
                         </p>
                         {/* Social Links */}
@@ -117,7 +117,7 @@ const Footer = () => {
                         <ul className="space-y-4">
                             <li className="flex items-start gap-3 text-sm text-gray-300">
                                 <span className="text-xl">📍</span>
-                                <span>Nepalgunj, Banke<br />Nepal</span>
+                                <span>Your City, Province<br />Nepal</span>
                             </li>
                             <li className="flex items-center gap-3 text-sm text-gray-300">
                                 <span className="text-xl">📞</span>
@@ -125,7 +125,7 @@ const Footer = () => {
                             </li>
                             <li className="flex items-center gap-3 text-sm text-gray-300">
                                 <span className="text-xl">✉️</span>
-                                <span>bcem2081@gmail.com</span>
+                                <span>info@ecem-demo.edu.np</span>
                             </li>
                             <li className="flex items-center gap-3 text-sm text-gray-300">
                                 <span className="text-xl">🕐</span>
@@ -141,7 +141,7 @@ const Footer = () => {
                 <div className="container-custom py-6">
                     <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                         <p className="text-sm text-gray-400 text-center md:text-left">
-                            © {currentYear} Bheri College of Engineering and Management. All rights reserved.
+                            © {currentYear} Everest College of Engineering and Management. All rights reserved.
                         </p>
                         <div className="flex items-center gap-6 text-sm text-gray-400">
                             <Link to="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>

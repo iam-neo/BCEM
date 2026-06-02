@@ -17,7 +17,7 @@ const PrivacyPolicy = () => {
                         Privacy Policy
                     </h1>
                     <p className="text-lg text-gray-300 max-w-2xl">
-                        At Bheri College of Engineering and Management (BCEM), we are committed to protecting your personal information and your right to privacy.
+                        At Everest College of Engineering and Management (ECEM), we are committed to protecting your personal information and your right to privacy.
                     </p>
                 </div>
             </div>
@@ -62,11 +62,11 @@ const PrivacyPolicy = () => {
 
                     <h2>6. Contact Us</h2>
                     <p>
-                        If you have questions or comments about this notice, you may email us at <strong>bcem2081@gmail.com</strong> or by post to:
+                        If you have questions or comments about this notice, you may email us at <strong>info@ecem-demo.edu.np</strong> or by post to:
                         <br /><br />
-                        Bheri College of Engineering and Management
+                        Everest College of Engineering and Management
                         <br />
-                        Nepalgunj, Banke
+                        Your City, Province
                         <br />
                         Nepal
                     </p>

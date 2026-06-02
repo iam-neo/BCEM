@@ -88,8 +88,8 @@ const Home = () => {
         "reviewBody": t.text,
         "itemReviewed": {
             "@type": "EducationalOrganization",
-            "name": "Bheri College of Engineering and Management",
-            "image": "https://bcem.vercel.app/logo.jpeg"
+            "name": "Everest College of Engineering and Management",
+            "image": "https://ecem-demo.vercel.app/logo.png"
         }
     }));
 
@@ -106,9 +106,9 @@ const Home = () => {
     return (
         <div className="home-page pt-20">
             <SEO
-                title="BCEM - Bheri College of Engineering & Management | Top College in Nepalgunj"
-                description="Join BCEM for B.E. Civil Engineering and BBA programs. Quality education, modern facilities, experienced faculty. Admissions open for 2026."
-                keywords="BCEM, civil engineering Nepalgunj, BBA college, engineering college Nepal, Bheri College"
+                title="ECEM - Everest College of Engineering & Management | Demo College Template"
+                description="Join ECEM for B.E. Civil Engineering and BBA programs. Quality education, modern facilities, experienced faculty. Admissions open for 2026."
+                keywords="ECEM, civil engineering, BBA college, engineering college Nepal, Everest College"
                 schema={homeSchema}
             />
             {/* Hero Section */}
@@ -124,16 +124,16 @@ const Home = () => {
                         <div className="text-white animate-fade-up">
                             <div className="flex items-center gap-3 mb-6">
                                 <img
-                                    src="/logo.jpeg"
-                                    alt="BCEM Logo"
+                                    src="/logo.png"
+                                    alt="ECEM Logo"
                                     className="h-20 w-20 rounded-full border-4 border-white/30 shadow-xl"
                                 />
                                 <span className="px-4 py-2 bg-white/10 backdrop-blur rounded-full text-sm font-medium border border-white/20">
-                                    Affiliated to Far-western University
+                                    Affiliated to National University
                                 </span>
                             </div>
                             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6 leading-tight">
-                                Bheri College of<br />
+                                Everest College of<br />
                                 <span className="text-primary-yellow">Engineering</span> &<br />
                                 <span className="text-primary-yellow">Management</span>
                             </h1>
@@ -181,7 +181,7 @@ const Home = () => {
             <section className="section bg-gray-50">
                 <div className="container-custom">
                     <div className="text-center mb-12">
-                        <h2 className="section-title">Why Choose BCEM?</h2>
+                        <h2 className="section-title">Why Choose ECEM?</h2>
                         <p className="text-gray-600 max-w-2xl mx-auto">
                             We provide a comprehensive learning environment with excellent facilities
                             and experienced faculty to help you achieve your goals.
@@ -361,7 +361,7 @@ const Home = () => {
                     <div className="text-center mb-12">
                         <h2 className="section-title">What Our Students Say</h2>
                         <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-                            Hear from our successful students about their experience at BCEM
+                            Hear from our successful students about their experience at ECEM
                             and how we helped shape their careers.
                         </p>
                     </div>
@@ -377,7 +377,7 @@ const Home = () => {
                     </h2>
                     <p className="text-lg text-gray-200 mb-8 max-w-2xl mx-auto">
                         Take the first step towards a successful career.
-                        Apply now for admission to BCEM.
+                        Apply now for admission to ECEM.
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">
                         <Link to="/admissions">
